@@ -53,7 +53,7 @@ private boolean check;
   setLocation(600, 300);
   setSize(250, 350);
   setVisible(true);
-  setDefaultCloseOperation(EXIT_ON_CLOSE);
+//  setDefaultCloseOperation(EXIT_ON_CLOSE);
  }
  
  
@@ -65,9 +65,6 @@ private static String getText() {
 	return null;
 }
  
-public static void main(String args[]) {
-  도서대출 la = new 도서대출();
- }
  
  public class Menu extends JPanel {
 	 JMenuBar menubar;

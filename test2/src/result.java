@@ -9,8 +9,8 @@ import javax.swing.border.EmptyBorder;
 public class result extends JFrame implements ActionListener{
 	
 	private JPanel contentPane;
-	bannap p;
-	도서대출 d;
+//	bannap p;
+//	도서대출 d;
 	
 	result() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -43,10 +43,10 @@ public class result extends JFrame implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		if(e.getActionCommand() == "반납") {
-			p = new bannap();
+			new bannap();
 		}
 		if(e.getActionCommand() == "대출") {
-			d = new 도서대출();
+			new 도서대출();
 		}
 	}
 
