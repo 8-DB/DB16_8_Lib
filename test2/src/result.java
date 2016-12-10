@@ -12,7 +12,7 @@ public class result extends JFrame implements ActionListener{
 //	bannap p;
 //	도서대출 d;
 	
-	result() {
+	public result() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 300, 400);
 		setVisible(true);
@@ -36,9 +36,7 @@ public class result extends JFrame implements ActionListener{
 		ban.addActionListener(this);
 		
 	}
-	public static void main(String[] args) {
-		new result();
-	}
+	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
