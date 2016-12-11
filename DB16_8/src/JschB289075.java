@@ -54,7 +54,6 @@ public class JschB289075 {
 				.append("&useUnicode=yes&characterEncoding=UTF-8"); // UTF8
 
 		return url;
-//		new JdbcB289075(url);
 
 	}
 

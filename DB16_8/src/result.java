@@ -9,8 +9,6 @@ import javax.swing.border.EmptyBorder;
 public class result extends JFrame implements ActionListener{
 	
 	private JPanel contentPane;
-//	bannap p;
-//	도서대출 d;
 	
 	public result() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

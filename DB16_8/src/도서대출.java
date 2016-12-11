@@ -46,15 +46,9 @@ public class 도서대출 extends JFrame {
 		add(paPanel);
 		add(loginPanel);
 
-		// // 마지막 Text 상자
-		// content = new JTextArea(3, 20);
-		// content.setLineWrap(true); // 자동 줄바꿈
-		// JScrollPane s = new JScrollPane(content); // 스크롤 추가
-		// add(s);
 		setLocation(600, 300);
 		setSize(250, 350);
 		setVisible(true);
-		// setDefaultCloseOperation(EXIT_ON_CLOSE);
 
 		jdbc = new JdbcB289075(new JschB289075(53306));
 
@@ -71,12 +65,9 @@ public class 도서대출 extends JFrame {
 	                  && jdbc.getDBCheck(Query.isBook(book))
 	                  && (jdbc.getDBCheck(Query.isAlready(book)) == false)
 	                  && jdbc.getDatabase(Query.insert대출(client, book)))
-//	            if (jdbc.getDatabase(Query.insert대출(client, book)))
 	               JOptionPane.showMessageDialog(null, "성공");
 	            else
 	               JOptionPane.showMessageDialog(null, "실패");
-	            // INSERT INTO 대출 (`대출기간`,`회원번호`) VALUES (CURDATE()+2,(SELECT
-	            // `회원번호` FROM 회원 WHERE `이름`="김일리"),());
 	         }
 	      });
 	   }
