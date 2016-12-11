@@ -63,22 +63,23 @@ public class 도서대출 extends JFrame {
 	}
 
 	private void showButton() {
-		b1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				String client = 대출.getText();
-				String book = 도서.getText();
-//				if (jdbc.getDBCheck(Query.isClient(client))
-//						&& jdbc.getDBCheck(Query.isBook(book))
-//						&& jdbc.getDatabase(Query.insert대출(client, book)))
-				if (jdbc.getDatabase(Query.insert대출(client, book)))
-					JOptionPane.showMessageDialog(null, "성공");
-				else
-					JOptionPane.showMessageDialog(null, "실패");
-				// INSERT INTO 대출 (`대출기간`,`회원번호`) VALUES (CURDATE()+2,(SELECT
-				// `회원번호` FROM 회원 WHERE `이름`="김일리"),());
-			}
-		});
-	}
+	      b1.addActionListener(new ActionListener() {
+	         public void actionPerformed(ActionEvent e) {
+	            String client = 대출.getText();
+	            String book = 도서.getText();
+	            if (jdbc.getDBCheck(Query.isClient(client))
+	                  && jdbc.getDBCheck(Query.isBook(book))
+	                  && (jdbc.getDBCheck(Query.isAlready(book)) == false)
+	                  && jdbc.getDatabase(Query.insert대출(client, book)))
+//	            if (jdbc.getDatabase(Query.insert대출(client, book)))
+	               JOptionPane.showMessageDialog(null, "성공");
+	            else
+	               JOptionPane.showMessageDialog(null, "실패");
+	            // INSERT INTO 대출 (`대출기간`,`회원번호`) VALUES (CURDATE()+2,(SELECT
+	            // `회원번호` FROM 회원 WHERE `이름`="김일리"),());
+	         }
+	      });
+	   }
 
 	private static String getText() {
 		// TODO Auto-generated method stub

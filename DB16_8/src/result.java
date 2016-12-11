@@ -10,7 +10,7 @@ public class result extends JFrame implements ActionListener{
 	
 	private JPanel contentPane;
 //	bannap p;
-//	ë„ì„œëŒ€ì¶œ d;
+//	µµ¼­´ëÃâ d;
 	
 	public result() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -25,12 +25,12 @@ public class result extends JFrame implements ActionListener{
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton dae = new JButton("ëŒ€ì¶œ");
+		JButton dae = new JButton("´ëÃâ");
 		dae.setBounds(70, 93, 139, 54);
 		contentPane.add(dae);
 		dae.addActionListener(this);
 		
-		JButton ban = new JButton("ë°˜ë‚©");
+		JButton ban = new JButton("¹İ³³");
 		ban.setBounds(70, 219, 139, 54);
 		contentPane.add(ban);
 		ban.addActionListener(this);
@@ -40,11 +40,11 @@ public class result extends JFrame implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		if(e.getActionCommand() == "ë°˜ë‚©") {
+		if(e.getActionCommand() == "¹İ³³") {
 			new bannap();
 		}
-		if(e.getActionCommand() == "ëŒ€ì¶œ") {
-			new ë„ì„œëŒ€ì¶œ();
+		if(e.getActionCommand() == "´ëÃâ") {
+			new µµ¼­´ëÃâ();
 		}
 	}
 

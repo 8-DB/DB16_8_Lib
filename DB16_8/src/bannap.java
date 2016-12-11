@@ -1,13 +1,11 @@
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
-import java.awt.*;
-
 public class bannap extends JFrame {
 	private JPanel contentPane;
 	private JTextField textField;
 	private JTextField textField_1;
-	bannap() {
+	public bannap() {
 		setTitle("도서관리");
 		
 		
